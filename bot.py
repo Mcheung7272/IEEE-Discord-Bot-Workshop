@@ -34,11 +34,6 @@ async def stats(ctx):
 async def marked(ctx, words):
     await ctx.send("```py\n{}\n```".format(words))
 
-@bot.command(name='loop')
-async def looped(ctx):
-    while True:
-        await ctx.send("hello")
-
 @marked.error
 async def disney(ctx, error):
     if isinstance(error, MissingRequiredArgument):
